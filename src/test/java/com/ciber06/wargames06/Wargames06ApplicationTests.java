@@ -2,12 +2,25 @@ package com.ciber06.wargames06;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.Assert.assertEquals;
 
-@SpringBootTest
-class Wargames06ApplicationTests {
+        @SpringBootTest
+        public class Wargames06ApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+                private Calculator calculator = new Calculator();
 
-}
+                @Test
+                void contextLoads() {
+                }
+
+                @Test
+                public void testSum() {
+                        assertEquals(5, calculator.sum(2, 3));
+                }
+	
+		@Test
+		public void testSumIncorrecto() {
+			assertEquals(7, calculator.sum(2, 3));
+		}
+        }
+
